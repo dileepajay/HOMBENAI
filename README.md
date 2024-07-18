@@ -1,9 +1,27 @@
 
 # Cow Identity Recognition by Nose-Prints
 
-This project provides a comprehensive approach to identifying cows by their unique nose-prints. It involves multiple stages including image preprocessing, feature extraction, classifier training, and testing.
-
 ![Alt text](_docs/app_ui.png) 
+
+This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
+
+### Key Features
+
+- **Image Preprocessing**: The project includes scripts to preprocess images by resizing, grayscale conversion, adaptive thresholding, and morphological operations to highlight nose patterns.
+- **Annotation**: Tools to manually annotate images to mark the nose areas, creating a dataset for training.
+- **Rescaling**: Automated scripts to rescale images and annotations to multiple sizes, facilitating robust training.
+- **Negative Sample Preparation**: Guides to prepare and resize negative samples to improve the model's ability to distinguish noses from other parts of the cow or background.
+- **Cascade Classifier Training**: Steps to train a Haar cascade classifier using positive and negative samples, tailored to detect cow noses.
+- **Nose Extraction**: Tools to use the trained classifier to extract nose regions from images.
+- **Nose-Print Processing**: Scripts to process extracted noses into high-contrast prints suitable for recognition.
+- **Identifier Training**: Training an identifier model using KNN or CNN algorithms to recognize individual cows from their nose prints.
+- **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
+
+### Current Status
+
+This project is currently in the research and prototype stage. It is not yet intended for industrial use. The current focus is on developing and refining the algorithms and methods to ensure accurate and reliable cow identification. Contributions and feedback are welcome to help improve the system.
+ 
+
 
 ![Alt text](_docs/cow_node_detection_cascade_test.jpg)
 
