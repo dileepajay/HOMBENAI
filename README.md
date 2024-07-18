@@ -5,7 +5,7 @@
 
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
 
-### Key Features
+## Key Features
 
 - **Image Preprocessing**: The project includes scripts to preprocess images by resizing, grayscale conversion, adaptive thresholding, and morphological operations to highlight nose patterns.
 - **Annotation**: Tools to manually annotate images to mark the nose areas, creating a dataset for training.
@@ -17,15 +17,98 @@ This project provides a comprehensive approach to identifying cows by their uniq
 - **Identifier Training**: Training an identifier model using KNN or CNN algorithms to recognize individual cows from their nose prints.
 - **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
 
-### Current Status
+## Current Status
 
 This project is currently in the research and prototype stage. It is not yet intended for industrial use. The current focus is on developing and refining the algorithms and methods to ensure accurate and reliable cow identification. Contributions and feedback are welcome to help improve the system.
- 
 
+---
+
+## Cascade Classifier Training
+In this project, we trained a Haar cascade classifier to identify the nose print from a clear cow face. The classifier was trained using 50 cow face images as positive samples and 1500 non-nose images as negative samples. The trained cascade classifier can be used to detect the nose area in cow face images accurately.
 
 ![Alt text](_docs/cow_node_detection_cascade_test.jpg)
 
-### Installation
+The trained classifier is saved as `cascade.xml` and can be used in various scripts for nose detection. You can download the trained `cascade.xml` file from the following link:
+
+[Download cascade.xml](https://your-download-link-here)
+
+---
+
+## Nose Extraction
+
+In this project, we utilize the trained cascade classifier (`cascade.xml`) to extract nose regions from cow face images. The classifier accurately detects the nose area in a given image, allowing us to isolate this region for further processing.
+
+![Alt text](_docs/extracted_cow_noses.png)
+
+The process involves:
+1. **Loading the trained cascade classifier**: Using OpenCV to load `cascade.xml`.
+2. **Detecting the nose region**: Applying the classifier to the cow face images to locate the nose.
+3. **Cropping the detected nose region**: Extracting the nose area from the image based on the detected coordinates.
+
+This is implemented in the `script_extract/nose_extract.py` script. The extracted nose images are saved in the `noses/` directory.
+
+---
+
+## Nose-Print Processing
+
+After extracting the nose regions, we process these images to create high-contrast nose prints suitable for recognition. This step enhances the unique patterns on the nose, making them more distinguishable for the recognition model.
+
+![Alt text](_docs/nose_print_processing.png)
+
+The process involves:
+1. **Grayscale conversion**: Converting the extracted nose images to grayscale to simplify the image data.
+2. **Adaptive thresholding**: Applying adaptive thresholding to highlight the unique patterns on the nose.
+3. **Morphological operations**: Using morphological operations to further enhance the patterns and remove noise.
+
+This is implemented in the `script_extract/node_to_print.py` script. The processed nose prints are saved in the `noseprint/` directory.
+
+By enhancing the nose prints, we ensure that the recognition model can effectively differentiate between individual cows based on their unique nose patterns.
+
+--- 
+
+## Identifier Training
+
+In this project, we employ machine learning techniques to recognize individual cows based on their unique nose prints. The two primary algorithms considered for this task are K-Nearest Neighbors (KNN) and Convolutional Neural Networks (CNN).
+
+### K-Nearest Neighbors (KNN)
+
+KNN is a simple and effective algorithm for classification, especially suited for small datasets. It works by comparing the features of a new data point to the features of the training data points and assigning the most common label among the nearest neighbors.
+
+- **Advantages of KNN**:
+  - **Simplicity**: Easy to understand and implement.
+  - **Effective for Small Datasets**: Performs well with limited data.
+  - **No Training Phase**: KNN is a lazy learner, meaning it doesn't require a training phase, which can be advantageous for smaller datasets.
+
+- **Usage in this Project**:
+  - We use KNN due to our limited dataset of cow nose prints.
+  - The model is trained using features extracted from the nose prints, and the trained KNN classifier can identify individual cows based on these features.
+
+The implementation of KNN for nose print recognition is provided in the `script_identifier/train_identifier.py` script.
+
+### Convolutional Neural Networks (CNN)
+
+CNNs are a class of deep neural networks commonly used for analyzing visual imagery. They are particularly powerful for large datasets and complex image recognition tasks, such as fingerprint detection.
+
+- **Advantages of CNN**:
+  - **High Accuracy**: Capable of capturing complex patterns and details in images.
+  - **Scalability**: Performs better with larger datasets and can be scaled up easily.
+  - **Robustness**: Handles variations in image data effectively, making it ideal for tasks like fingerprint and face recognition.
+
+- **Usage for Better Results**:
+  - If you have access to a larger dataset of cow nose prints, using CNN can significantly improve recognition accuracy.
+  - CNNs have been successfully used in fingerprint detection and other biometric recognition systems, making them a suitable choice for more extensive and detailed nose print datasets.
+
+For those interested in implementing a CNN-based approach for better results, you can explore frameworks like TensorFlow or PyTorch to build and train your models.
+
+## Conclusion
+
+While KNN is an excellent choice for this project due to the small dataset, exploring CNNs can lead to more accurate and robust models if you have access to larger datasets. The current implementation provides a foundation that can be scaled and improved upon with more data and advanced algorithms.
+
+---
+ 
+ 
+
+# Installation
 
 1. **Install Python**:
     - Download and install the latest version of Python from [python.org](https://www.python.org/downloads/).
