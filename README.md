@@ -3,36 +3,48 @@
 
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. It involves multiple stages including image preprocessing, feature extraction, classifier training, and testing.
 
-## Project Directory Structure
+![Alt text](_docs/app_ui.png) 
 
-```
-cow_identity_recognition/
-├── app/
-│   └── HOMBENAI.py
-├── script_cascade/
-│   ├── cascade_test.py
-│   ├── cascade_test_loop.py
-│   ├── castcade_debug.py
-│   ├── negative_images_resize.py
-│   ├── positive_images_resize.py
-│   ├── script_create_negative_txt.py
-│   └── output/
-│       └── 64/
-├── script_extract/
-│   ├── nose_extract.py
-│   └── node_to_print.py
-├── script_identifier/
-│   ├── train_identifier.py
-│   ├── model_test.py
-│   └── output/
-├── positives/
-│   └── 1024x1024/
-├── negatives/
-├── noses/
-├── noseprint/
-├── test_images/
-├── README.md
-```
+![Alt text](_docs/cow_node_detection_cascade_test.jpg)
+
+### Installation
+
+1. **Install Python**:
+    - Download and install the latest version of Python from [python.org](https://www.python.org/downloads/).
+    - Add Python and the Scripts folder to your environment variable `PATH`.
+
+    Example for Windows:
+    ```
+    C:\Python39;
+    C:\Python39\Scripts;
+    ```
+
+2. **Install OpenCV**:
+    - Download OpenCV  [opencv-3.4.11-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/3.4.11/opencv-3.4.11-vc14_vc15.exe/download). This version have pre-builds. 
+    - Run the installer and extract the files.
+    - Locate the `bin` directory in the extracted files and add it to your environment variable `PATH`.
+
+    Example for Windows:
+    ```
+    C:\opencv\build\x64\vc15\bin;
+    ```
+
+3. **Install Python Dependencies**:
+    - Navigate to the project directory and install the required Python packages using the `requirements.txt` file.
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Project**:
+    - You can use the command prompt to run the scripts, or you can use an IDE like PyCharm, VSCode, or any Python-compatible IDE to run the project.
+
+    Example command to run a script:
+    ```bash
+    python script_name.py
+    ```
+
+Replace `script_name.py` with the name of the script you want to run.
 
 ## Stages
 
