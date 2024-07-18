@@ -64,7 +64,7 @@ This is implemented in the `script_extract/node_to_print.py` script. The process
 
 By enhancing the nose prints, we ensure that the recognition model can effectively differentiate between individual cows based on their unique nose patterns.
 
----
+--- 
 
 ## Identifier Training
 
