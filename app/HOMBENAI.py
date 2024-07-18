@@ -133,7 +133,7 @@ def display_image(cv_img, label):
 
 # Set up the GUI
 root = TkinterDnD.Tk()
-root.title("Nose Detection and Processing")
+root.title("HOMBENAI by dileepajay")
 root.geometry("800x600")
 
 # Labels to display images

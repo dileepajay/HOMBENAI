@@ -1,0 +1,6 @@
+numpy
+opencv-python-headless
+scikit-learn
+joblib
+pillow
+tkinterdnd2
