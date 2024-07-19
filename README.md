@@ -1,9 +1,18 @@
 
 # Cow Identity Recognition by Nose-Prints
 
-![Alt text](_docs/app_ui.png) 
-
+![Alt text](_docs/ui.gif)
+ 
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
+
+<table>
+<tr>
+<td>
+
+![Alt text](_docs/app_ui.png)
+
+</td>
+<td>
 
 ## Key Features
 
@@ -17,14 +26,25 @@ This project provides a comprehensive approach to identifying cows by their uniq
 - **Identifier Training**: Training an identifier model using KNN or CNN algorithms to recognize individual cows from their nose prints.
 - **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
 
+</td>
+
+</tr>
+
+</table>
+
+
 ## Current Status
 
 This project is currently in the research and prototype stage. It is not yet intended for industrial use. The current focus is on developing and refining the algorithms and methods to ensure accurate and reliable cow identification. Contributions and feedback are welcome to help improve the system.
 
 ---
 
-## Cascade Classifier Training
-In this project, we trained a Haar cascade classifier to identify the nose print from a clear cow face. The classifier was trained using 50 cow face images as positive samples and 1500 non-nose images as negative samples. The trained cascade classifier can be used to detect the nose area in cow face images accurately.
+# Cascade Classifier Training for Detect Cow Noses
+In this project, we trained a Haar cascade classifier to identify the nose print from a clear cow face. (follow stage 1-8) The classifier was trained using 50 cow face images as positive samples and 1500 non-nose images as negative samples. The trained cascade classifier can be used to detect the nose area in cow face images accurately.
+
+![Alt text](_docs/cownose_cascade_training.jpg)
+Process of training and using an OpenCV Haar cascade classifier for cow nose recognition. It starts with the preparation of positive and negative data sets. The positive data set includes annotated cow face images, while the negative set contains images without cow noses. These are listed in `positive.txt` and `negative.txt` respectively. Using OpenCV, a positive vector file is created from the annotated data, and the cascade classifier is trained using this vector file and the negative images, resulting in `cascade.xml`. This trained classifier is then used to detect and extract nose regions from test images, producing high-contrast nose prints for further recognition tasks. The diagram visually connects each step from data preparation to nose print extraction.
+
 
 ![Alt text](_docs/cow_node_detection_cascade_test.jpg)
 
@@ -47,6 +67,15 @@ The process involves:
 
 This is implemented in the `script_extract/nose_extract.py` script. The extracted nose images are saved in the `noses/` directory.
 
+
+
+# Cow Nose Identifier Training
+In this project, we employ machine learning techniques to recognize individual cows based on their unique nose prints. The two primary algorithms considered for this task are K-Nearest Neighbors (KNN) and Convolutional Neural Networks (CNN).
+
+![Alt text](_docs/cownose_identifier_training.jpg)
+
+The image illustrates the process of training and using a K-Nearest Neighbors (KNN) model for cow nose print recognition. It begins with a set of high-contrast nose print images (signatures) and their corresponding labels, representing cow identities. These data are used to train the KNN model via the train_identifier.py script, resulting in the trained model (cowrec_knn_model.xml) and a label dictionary (label_dict.npy). The trained model can then predict the identity of a new nose print by finding the closest matches among the trained signatures and assigning the most common label. This prediction process enables accurate cow identification based on their unique nose prints.
+
 ---
 
 ## Nose-Print Processing
@@ -66,11 +95,7 @@ By enhancing the nose prints, we ensure that the recognition model can effective
 
 --- 
 
-## Identifier Training
-
-In this project, we employ machine learning techniques to recognize individual cows based on their unique nose prints. The two primary algorithms considered for this task are K-Nearest Neighbors (KNN) and Convolutional Neural Networks (CNN).
-
-### K-Nearest Neighbors (KNN)
+## K-Nearest Neighbors (KNN)
 
 KNN is a simple and effective algorithm for classification, especially suited for small datasets. It works by comparing the features of a new data point to the features of the training data points and assigning the most common label among the nearest neighbors.
 
@@ -85,7 +110,7 @@ KNN is a simple and effective algorithm for classification, especially suited fo
 
 The implementation of KNN for nose print recognition is provided in the `script_identifier/train_identifier.py` script.
 
-### Convolutional Neural Networks (CNN)
+## Convolutional Neural Networks (CNN)
 
 CNNs are a class of deep neural networks commonly used for analyzing visual imagery. They are particularly powerful for large datasets and complex image recognition tasks, such as fingerprint detection.
 
