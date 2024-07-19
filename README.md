@@ -6,12 +6,7 @@
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
 
 <table>
-<tr>
-<td>
-
-![Alt text](_docs/app_ui.png)
-
-</td>
+<tr> 
 <td>
 
 ## Key Features
