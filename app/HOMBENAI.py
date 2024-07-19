@@ -5,6 +5,7 @@ from tkinter import filedialog
 from tkinterdnd2 import DND_FILES, TkinterDnD
 from PIL import Image, ImageTk
 import numpy as np
+import time
 
 # Load the trained model and label dictionary
 model_path = r"..//script_identifier//output//cowrec_knn_model.xml"
