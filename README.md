@@ -5,9 +5,6 @@
  
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
 
-<table>
-<tr> 
-<td>
 ## Key Features
 
 - **Image Preprocessing**: The project includes scripts to preprocess images by resizing, grayscale conversion, adaptive thresholding, and morphological operations to highlight nose patterns.
@@ -19,13 +16,6 @@ This project provides a comprehensive approach to identifying cows by their uniq
 - **Nose-Print Processing**: Scripts to process extracted noses into high-contrast prints suitable for recognition.
 - **Identifier Training**: Training an identifier model using KNN or CNN algorithms to recognize individual cows from their nose prints.
 - **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
-
-</td>
-
-</tr>
-
-</table>
-
 
 ## Current Status
 
