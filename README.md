@@ -8,7 +8,6 @@ This project provides a comprehensive approach to identifying cows by their uniq
 <table>
 <tr> 
 <td>
-
 ## Key Features
 
 - **Image Preprocessing**: The project includes scripts to preprocess images by resizing, grayscale conversion, adaptive thresholding, and morphological operations to highlight nose patterns.
