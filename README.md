@@ -27,7 +27,9 @@ This project provides a comprehensive approach to identifying cows by their uniq
 - **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
 
 </td>
+
 </tr>
+
 </table>
 
 
