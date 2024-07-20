@@ -5,15 +5,6 @@
  
 This project provides a comprehensive approach to identifying cows by their unique nose-prints. The goal is to develop a reliable system that can recognize individual cows based on the distinctive patterns found on their noses. This method can be highly beneficial for livestock management, ensuring accurate identification without the need for invasive or stressful methods.
 
-<table>
-<tr>
-<td>
-
-![Alt text](_docs/app_ui.png)
-
-</td>
-<td>
-
 ## Key Features
 
 - **Image Preprocessing**: The project includes scripts to preprocess images by resizing, grayscale conversion, adaptive thresholding, and morphological operations to highlight nose patterns.
@@ -25,13 +16,6 @@ This project provides a comprehensive approach to identifying cows by their uniq
 - **Nose-Print Processing**: Scripts to process extracted noses into high-contrast prints suitable for recognition.
 - **Identifier Training**: Training an identifier model using KNN or CNN algorithms to recognize individual cows from their nose prints.
 - **GUI Application**: A user-friendly graphical interface for testing the system by dragging and dropping test images to see the identification results.
-
-</td>
-
-</tr>
-
-</table>
-
 
 ## Current Status
 
@@ -277,12 +261,27 @@ python app/HOMBENAI.py
 
 ## Acknowledgements
 
-Thanks to the researchers and authors of the paper "[Cattle identification: the history of nose prints approach in brief](https://www.researchgate.net/publication/347434374_Cattle_identification_the_history_of_nose_prints_approach_in_brief)" for their valuable work and contributions to this field.
+Thanks to the researchers and authors of the following papers for their valuable work and contributions to this field:
+
+- [Cattle identification: the history of nose prints approach in brief](https://www.researchgate.net/publication/347434374_Cattle_identification_the_history_of_nose_prints_approach_in_brief)
+- [Cattle Identification using Muzzle Print Images based on Texture Features Approach](https://www.researchgate.net/publication/266855150_Cattle_Identication_using_Muzzle_Print_Images_based_on_Texture_Features_Approach#fullTextFileContent)
+- [CattleFaceNet: A cattle face identification approach based on RetinaFace and ArcFace loss](https://www.sciencedirect.com/science/article/pii/S016816992100692X)
+- [The ecology and behaviour of a protected area Sri Lankan leopard (Panthera pardus kotiya) population](https://www.researchgate.net/publication/313798055_The_ecology_and_behaviour_of_a_protected_area_Sri_Lankan_leopard_Panthera_pardus_kotiya_population)
+
+Your research has been instrumental in shaping this project and advancing the field of animal identification and behavior analysis.
 
 ## Notes
 
 - Make sure to install all necessary dependencies before running the scripts.
 - The model's accuracy can be improved by using a larger dataset and fine-tuning the parameters.
+
+## Contact Us
+
+For project requests, collaborations, or inquiries, please contact us at:
+
+📧 Email: [contact@nuralminds.net](mailto:contact@nuralminds.net)
+
+We look forward to hearing from you!
 
 ## License
 
