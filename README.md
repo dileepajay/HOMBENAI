@@ -279,7 +279,7 @@ Your research has been instrumental in shaping this project and advancing the fi
 
 For project requests, collaborations, or inquiries, please contact us at:
 
-📧 Email: [contact@nuralminds.net](mailto:contact@nuralminds.net)
+📧 Email: [contact@neurominds.net](mailto:contact@neurominds.net)
 
 We look forward to hearing from you!
 
