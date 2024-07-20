@@ -12,7 +12,7 @@ reverse_label_dict = {v: k for k, v in label_dict.items()}
 orb = cv2.ORB_create()
 
 # Path to test image
-test_img_path = r"../noseprint/image3.jpg"
+test_img_path = r"../noseprint/image2.jpg"
 
 # Read and preprocess the test image
 test_img = cv2.imread(test_img_path)
